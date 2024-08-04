@@ -1,0 +1,22 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "This is Food App ",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajit1028/foodApp.git"
+  },
+  "author": "Ajit Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajit1028/foodApp/issues"
+  },
+  "homepage": "https://github.com/ajit1028/foodApp#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
