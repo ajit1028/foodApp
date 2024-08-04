@@ -8,7 +8,7 @@ const Title = () => (
 );
 
 const data = 100;
-const jsCode = <h1> i am on my way to become a awesome resct developer 🚀</h1>;
+const jsCode = <h1> i am on my way to become an awesome resct developer 🚀</h1>;
 
 const HeadingComponent = () => (
   <div id="container">
