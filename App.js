@@ -1,25 +1,821 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Title = () => (
-  <h1 id="heading" className="ajit" tabIndex="1">
-    Namste Raect using JSX 🚀
-  </h1>
-);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"
+        />
+      </div>
 
-const data = 100;
-const jsCode = <h1> i am on my way to become an awesome resct developer 🚀</h1>;
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const HeadingComponent = () => (
-  <div id="container">
-    {data + 200}
-    {jsCode}
-    {Title()}
-    <Title></Title>
-    <Title />
-    <h1>Namaste Raect using HeadingComponent 🚀</h1>
-  </div>
-);
+const resList = [
+  {
+    info: {
+      id: "405798",
+      name: "Chinese Wok",
+      cloudinaryImageId: "e0839ff574213e6f35b3899ebf1fc597",
+      locality: "Malleshwaram",
+      areaName: "Malleshwaram",
+      costForTwo: "₹250 for two",
+      cuisines: ["Chinese", "Asian", "Tibetan", "Desserts"],
+      avgRating: 4.3,
+      parentId: "61955",
+      avgRatingString: "4.3",
+      totalRatingsString: "500+",
+      sla: {
+        deliveryTime: 48,
+        lastMileTravel: 4.8,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "4.8 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 22:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "ITEMS",
+        subHeader: "AT ₹149",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.2",
+          ratingCount: "10+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/chinese-wok-malleshwaram-bangalore-405798",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "10844",
+      name: "Hotel Chandrika",
+      cloudinaryImageId: "bjsywjtbostst0h5cojy",
+      locality: "Cunningham Road",
+      areaName: "Vasanth Nagar",
+      costForTwo: "₹300 for two",
+      cuisines: ["South Indian", "Chinese", "Juices", "Chaat", "Ice Cream"],
+      avgRating: 4.5,
+      parentId: "21636",
+      avgRatingString: "4.5",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 28,
+        lastMileTravel: 3.8,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "3.8 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 21:45:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "₹100 OFF",
+        subHeader: "ABOVE ₹999",
+        discountTag: "FLAT DEAL",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "3.9",
+          ratingCount: "10K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/hotel-chandrika-cunningham-road-vasanth-nagar-bangalore-10844",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "684427",
+      name: "Cafe Amudham",
+      cloudinaryImageId: "e62351117b87978ba8af4c541d834053",
+      locality: "Wilson Garden",
+      areaName: "Jayanagar",
+      costForTwo: "₹400 for two",
+      cuisines: ["South Indian", "Snacks"],
+      avgRating: 4.6,
+      parentId: "396620",
+      avgRatingString: "4.6",
+      totalRatingsString: "5K+",
+      sla: {
+        deliveryTime: 28,
+        lastMileTravel: 2.9,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "2.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-08 00:45:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+            description: "OnlyOnSwiggy",
+          },
+        ],
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "OnlyOnSwiggy",
+                  imageId:
+                    "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "",
+                  fontColor: "#7E808C",
+                  iconId: "guiltfree/GF_Logo_android_3x",
+                  shortDescription: "options available",
+                },
+              },
+            ],
+          },
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.3",
+          ratingCount: "1K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/cafe-amudham-wilson-garden-jayanagar-bangalore-684427",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "317997",
+      name: "Sri Udupi Grand Veg",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/3/f9acbc68-6634-4d35-b3d2-535388f97932_317997.jpg",
+      locality: "Akkithimmanahalli",
+      areaName: "Shanti Nagar",
+      costForTwo: "₹250 for two",
+      cuisines: ["Beverages", "North Indian", "South Indian"],
+      avgRating: 4.4,
+      parentId: "194693",
+      avgRatingString: "4.4",
+      totalRatingsString: "500+",
+      sla: {
+        deliveryTime: 23,
+        lastMileTravel: 2.4,
+        serviceability: "SERVICEABLE",
+        slaString: "20-25 mins",
+        lastMileTravelString: "2.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 22:30:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "ITEMS",
+        subHeader: "AT ₹55",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/sri-udupi-grand-veg-akkithimmanahalli-shanti-nagar-bangalore-317997",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "56428",
+      name: "Puliyogare Point",
+      cloudinaryImageId: "wet9zrjusmdtkk16jlrz",
+      locality: "Basavanagudi",
+      areaName: "Basavanagudi",
+      costForTwo: "₹150 for two",
+      cuisines: ["South Indian"],
+      avgRating: 4.6,
+      parentId: "8409",
+      avgRatingString: "4.6",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 27,
+        lastMileTravel: 3.7,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "3.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 22:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "ITEMS",
+        subHeader: "AT ₹65",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.2",
+          ratingCount: "5K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/puliyogare-point-basavanagudi-bangalore-56428",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "96527",
+      name: "Vijayalakshmi",
+      cloudinaryImageId: "r94u50lcikbaqulaofdi",
+      locality: "Basavanagudi",
+      areaName: "Basavanagudi",
+      costForTwo: "₹150 for two",
+      cuisines: ["South Indian", "North Indian", "Chinese"],
+      avgRating: 4.4,
+      parentId: "20982",
+      avgRatingString: "4.4",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 29,
+        lastMileTravel: 3.7,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "3.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 22:30:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "₹75 OFF",
+        subHeader: "ABOVE ₹299",
+        discountTag: "FLAT DEAL",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "3.8",
+          ratingCount: "1K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/vijayalakshmi-basavanagudi-bangalore-96527",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "422863",
+      name: "Jose Mess",
+      cloudinaryImageId: "lltunkievzpxrrcarfmy",
+      locality: "BTM Layout",
+      areaName: "BTM",
+      costForTwo: "₹150 for two",
+      cuisines: ["South Indian"],
+      avgRating: 4.5,
+      parentId: "20129",
+      avgRatingString: "4.5",
+      totalRatingsString: "5K+",
+      sla: {
+        deliveryTime: 36,
+        lastMileTravel: 5,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "5.0 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 22:45:00",
+        opened: true,
+      },
+      badges: {
+        textExtendedBadges: [
+          {
+            iconId: "guiltfree/GF_Logo_android_3x",
+            shortDescription: "options available",
+            fontColor: "#7E808C",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "",
+                  fontColor: "#7E808C",
+                  iconId: "guiltfree/GF_Logo_android_3x",
+                  shortDescription: "options available",
+                },
+              },
+            ],
+          },
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "10% OFF",
+        subHeader: "UPTO ₹40",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.1",
+          ratingCount: "1K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/jose-mess-layout-btm-bangalore-422863",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "307554",
+      name: "Bangalore Thindies",
+      cloudinaryImageId: "gmusbb8jn3ocox01hnc7",
+      locality: "Infantry Road",
+      areaName: "Shivaji Nagar",
+      costForTwo: "₹100 for two",
+      cuisines: ["South Indian"],
+      avgRating: 4.3,
+      parentId: "20090",
+      avgRatingString: "4.3",
+      totalRatingsString: "1K+",
+      sla: {
+        deliveryTime: 29,
+        lastMileTravel: 3.9,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "3.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-08-07 18:50:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "30% OFF",
+        subHeader: "UPTO ₹75",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.1",
+          ratingCount: "1K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-5425f4e8-dfcb-46c7-8a20-3ba6a62b30e2",
+    },
+    cta: {
+      link: "https://www.swiggy.com/restaurants/bangalore-thindies-infantry-road-shivaji-nagar-bangalore-307554",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+];
+const ResturantCard = (props) => {
+  // console.log(props);
+  const { resData } = props;
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    costForTwo,
+    slaString,
+  } = resData?.info;
+  return (
+    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+      <img
+        className="res-logo"
+        alt="res-logo"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          cloudinaryImageId
+        }
+      />
+      <h3>{resData.info.name}</h3>
+      <h4>{resData.info.cuisines.join(", ")}</h4>
+      <h4>{resData.info.avgRating} stars</h4>
+      <h4>{resData.info.costForTwo} </h4>
+      <h4>{resData.info.sla.slaString} minutes</h4>
+    </div>
+  );
+};
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search "> Search</div>
+      <div className="res-container">
+        {resList.map((resturant) => (
+          <ResturantCard key={resturant.info.id} resData={resturant} />
+        ))}
+      </div>
+    </div>
+  );
+};
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
