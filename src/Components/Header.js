@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import { set } from "mongoose";
 
 const Header = () => {
+  const [btnNameReact, setbtnNameReact] = useState("Login");
+
   return (
     <div className="header">
       <div className="logo-container">
@@ -13,6 +17,16 @@ const Header = () => {
           <li>About</li>
           <li>Contact Us</li>
           <li>Cart</li>
+          <button
+            className="Login"
+            onClick={() => {
+              btnNameReact === "Login"
+                ? setbtnNameReact("Logout")
+                : setbtnNameReact("Login");
+            }}
+          >
+            {btnNameReact}
+          </button>
         </ul>
       </div>
     </div>
