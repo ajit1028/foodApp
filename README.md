@@ -105,12 +105,6 @@
 - Updating
 - Unmounting
 
-  - constructor -> render -> componentDidMount
-
-  - For embeded components
-  - parent constructor -> parent render -> child constructor, child -> render, child componentDidMount -> parent ComponentDidMount
-  - parent componentDidMount
-
 # App Optimization
 
 - Chunking
