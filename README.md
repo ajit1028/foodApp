@@ -1,10 +1,10 @@
 # foodApp
 
-^ - for minor upgrades
-~ - major upgrades
--D - for dev dependencies(Used specifically in developement)
-package.json - contains the current version of dependency
-package.lock.json - contains the exact version info of dependencies
+- ^ - for minor upgrades
+- ~ - major upgrades
+- -D - for dev dependencies(Used specifically in developement)
+- package.json - contains the current version of dependency
+- package.lock.json - contains the exact version info of dependencies
 
 # Parcel
 
