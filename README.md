@@ -110,3 +110,12 @@
   - For embeded components
   - parent constructor -> parent render -> child constructor, child -> render, child componentDidMount -> parent ComponentDidMount
   - parent componentDidMount
+
+# App Optimization
+
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Lazy Loading
+- Dynamic Import
+- On Demand Loading
