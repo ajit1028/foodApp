@@ -20,4 +20,21 @@ const ResturantCard = (props) => {
   );
 };
 
+//Higher Order Component
+
+//Input - ResturantCard => ResturantCardVeg
+
+export const withVegLabel = (ResturantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-green-300 text-black m-2 p-2 rounded-lg">
+          Veg
+        </label>
+        <ResturantCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default ResturantCard;

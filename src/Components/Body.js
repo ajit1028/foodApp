@@ -1,26 +1,30 @@
-import ResturantCard from "./ResturantCard";
-import { useState, useEffect } from "react";
+import ResturantCard, { withVegLabel } from "./ResturantCard";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfResturants, setListOfResturant] = useState([]);
   const [filteredResturant, setFilteredResturant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const ResturantCardVeg = withVegLabel(ResturantCard);
+
+  // console.log("Body rendered", listOfResturants);
+
   useEffect(() => {
     fetchData();
   }, []);
-
-  // console.log("Body rendered");
 
   const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setListOfResturant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -34,6 +38,8 @@ const Body = () => {
     return (
       <h1>It looks like you are offline !!!.Check your internet Connection.</h1>
     );
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   return listOfResturants === undefined || listOfResturants.length === 0 ? (
     <Shimmer />
@@ -78,11 +84,23 @@ const Body = () => {
             Top Rated Resturants{" "}
           </button>
         </div>
+        <div className="search p-4 m-4 flex items-center ">
+          <label>UserName : </label>
+          <input
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap">
         {filteredResturant.map((resturant) => (
           <Link key={resturant.info.id} to={"/resturants/" + resturant.info.id}>
-            <ResturantCard resData={resturant} />
+            {resturant.info.veg ? (
+              <ResturantCardVeg resData={resturant} />
+            ) : (
+              <ResturantCard resData={resturant} />
+            )}
           </Link>
         ))}
       </div>

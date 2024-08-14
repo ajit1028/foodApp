@@ -14,12 +14,12 @@ class UserClass extends React.Component {
         avatar_url: "https://dummy-photo",
       },
     };
-    console.log(this.props.name + " Child Constructor");
+    // console.log(this.props.name + " Child Constructor");
   }
 
   // async is there  for understanding the api call
   async componentDidMount() {
-    console.log(this.props.name + " Child Compenent Did Mount");
+    //console.log(this.props.name + " Child Compenent Did Mount");
     const data = await fetch("https://api.github.com/users/ajit1028");
     const json = await data.json();
 
@@ -30,11 +30,11 @@ class UserClass extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("Component Did Update is called");
+    // console.log("Component Did Update is called");
   }
 
   componentWillUnmount() {
-    console.log("Component Will Unmount is called");
+    // console.log("Component Will Unmount is called");
   }
 
   render() {
