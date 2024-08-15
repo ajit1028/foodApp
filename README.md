@@ -123,3 +123,21 @@
 - ContextProvider <- to update the data from any component
 - Context.Consumer -> callback -- (data) => {} <- for class based components
 - We can pass functions like setState inside context
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- Slice (cartSlice)
+- dispatch(action)
+- Selector
+
+# Redux Toolkit
+
+- Install @reduxjs//toolkit and react-redux
+- Build out store
+- Connect our store to our app
+- Create Slice( cartSlice )
+- Dispatch (action)
+- Selector (subscribe to the slice )
