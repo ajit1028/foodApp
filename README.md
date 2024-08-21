@@ -1,4 +1,4 @@
-# foodApp
+# A Web App 🍔🚀
 
 - ^ - for minor upgrades
 - ~ - major upgrades
@@ -6,7 +6,7 @@
 - package.json - contains the current version of dependency
 - package.lock.json - contains the exact version info of dependencies
 
-# Parcel
+# Parcel 🌟
 
 - Dev Build
 - Local Server
@@ -26,7 +26,7 @@
 - Tree Shaking - Remove unused code
 - Differeent dev and prod bundles
 
-# Functional Component
+# Functional Component 
 
 - It is a normal function of javascript which returns a piece of code of JSX.
 - We can use normal function and arrow functions.
